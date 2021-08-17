@@ -1,0 +1,80 @@
+body {
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+}
+
+p {
+    color: #fff;
+}
+
+.loginForm {
+    background-color: #272a33;
+}
+
+.left {
+    background: url('../Background/left-bg.png') top right no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.left.sign {
+    background: url('../Background/signup-bg.jpg') top right no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: sticky;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.right {
+    overflow: auto;
+    height: 100vh;
+}
+
+.left::after {
+    background: linear-gradient( 315deg, rgba(255, 73, 0, 0.6), rgba(255, 73, 0, 0.5), rgba(20, 8, 5, 0.6), rgba(20, 8, 5, 0.7));
+}
+
+.left .text-des {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    z-index: 1;
+    color: #fff;
+}
+
+.des {
+    font-size: 18px;
+}
+
+.login-main {
+    max-width: 550px;
+    margin-right: auto;
+    margin-left: auto;
+    flex: 1;
+    padding: 140px 16px;
+}
+
+.title {
+    color: #fff;
+}
+
+.login-main .des {
+    font-size: 14px;
+}
+
+.form-label {
+    color: #fff!important;
+}
+
+.form-check-label {
+    color: #fff!important;
+}
+
+@media (max-width: 1199.98px) {
+    .left {
+        height: 240px;
+        position: relative;
+    }
+}
