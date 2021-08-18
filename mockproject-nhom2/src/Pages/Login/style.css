@@ -1,0 +1,89 @@
+body {
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+}
+
+p {
+    color: #fff;
+}
+
+.loginForm {
+    background-color: #272a33;
+}
+
+.loginForm .left {
+    background: url('https://i.pinimg.com/564x/ca/5e/e5/ca5ee5a93c527d01d79d4a0969ebddf6.jpg') top right no-repeat;
+    background-size: cover;
+    height: calc(100vh-40px);
+    position: sticky;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.loginForm .left.sign {
+    background: url('https://i.pinimg.com/564x/6f/50/6c/6f506cc07fd76e28da05fa5f021bf379.jpg') top right no-repeat;
+    background-size: cover;
+    height: calc(100vh - 50px);
+    position: sticky;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.loginForm .right {
+    overflow: auto;
+    height: calc(100vh - 50px);
+}
+.loginForm .right::-webkit-scrollbar{
+    display: none;
+}
+.left::after {
+    background: linear-gradient( 315deg, rgba(255, 73, 0, 0.6), rgba(255, 73, 0, 0.5), rgba(20, 8, 5, 0.6), rgba(20, 8, 5, 0.7));
+}
+
+.left .text-des {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    z-index: 1;
+    color: #fff;
+}
+
+.des {
+    font-size: 18px;
+}
+
+.login-main {
+    max-width: 550px;
+    margin-right: auto;
+    margin-left: auto;
+    flex: 1;
+    padding: 140px 16px;
+}
+
+.title-login {
+    color: #fff;
+}
+
+.login-main .des {
+    font-size: 14px;
+}
+
+.form-label {
+    color: #fff!important;
+}
+
+.form-check-label {
+    color: #fff!important;
+}
+
+.btn-submit-form {
+    background-color: #FF7324!important;
+}
+
+.btn-submit-form:hover {
+    background-color: #f05700;
+}
+
+@media (max-width: 1199.98px) {
+
+}
