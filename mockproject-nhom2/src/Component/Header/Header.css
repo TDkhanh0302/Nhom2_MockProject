@@ -1,0 +1,14 @@
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    justify-content: space-between;
+}
+.sign-up{
+    background-color: #FF7324;
+}
+.sign-up:hover{
+    background-color:#f05700;
+
+}
+}
