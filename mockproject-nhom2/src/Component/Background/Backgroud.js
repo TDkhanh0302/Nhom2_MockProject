@@ -9,7 +9,7 @@ function Background() {
           <div class="carousel-item active">
             <img src="./homepage img/home-background.jpg" class="d-block w-100" alt="..." />
             <div class="carousel-caption d-md-block">
-              <button type="button" class="btn">Create your tourament now</button>
+              <button type="button" class="btn create-btn">Create your tourament now</button>
             </div>
           </div>
         </div>
