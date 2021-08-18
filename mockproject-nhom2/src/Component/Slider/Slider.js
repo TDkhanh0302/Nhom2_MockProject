@@ -4,12 +4,13 @@ function Slider() {
     <div className="p-5">
           <h2 className="p-3">Top Games</h2>
           <div>
-            <img className='p-3' src="./homepage img/aov.png" alt="Arena of Valor" width="250px"/>
-            <img className='p-3' src="./homepage img/efootball.png" alt="eFootball Pes" width="250px" />
-            <img className='p-3' src="./homepage img/fifaonline.png" alt="Fifa Online" width="250px"/>
-            <img className='p-3' src="./homepage img/LOL.png" alt="Leage of Legends" width="250px"/>
-            <img className='p-3' src="./homepage img/nba2k.png" alt="Nba 2K" width="250px"/>
-            <img className='p-3' src="./homepage img/yugiou.png" alt="Yugi Oh!" width="250px"/>
+            <img className='p-3' src="./homepage img/logo-aov.png" alt="Arena of Valor" width="200px"/>
+            <img className='p-3' src="./homepage img/logo-efootball.png" alt="eFootball Pes" width="200px" />
+            <img className='p-3' src="./homepage img/logo-csgo.png" alt="eFootball Pes" width="200px" />
+            <img className='p-3' src="./homepage img/logo-fifaonline.png" alt="Fifa Online" width="200px"/>
+            <img className='p-3' src="./homepage img/logo-LOL.png" alt="Leage of Legends" width="200px"/>
+            <img className='p-3' src="./homepage img/logo-nba2k.png" alt="Nba 2K" width="200px"/>
+            <img className='p-3' src="./homepage img/logo-yugiou.png" alt="Yugi Oh!" width="200px"/>
       </div>
     </div>
   )
