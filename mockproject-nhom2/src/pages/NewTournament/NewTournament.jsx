@@ -41,12 +41,7 @@ function NewTournament(props) {
               <label className="col-3 form_label" htmlFor="game">
                 Game
               </label>
-              <select
-                className="form-control col-8"
-                name="game"
-                id="game"
-                required
-              >
+              <select className="form-control col-8" name="game" id="game" required>
                 <option value="">Counter-Strike: Global Offensive</option>
                 <option value="">League of Legends</option>
                 <option value="">FIFA 14</option>
@@ -57,12 +52,7 @@ function NewTournament(props) {
               <label className="col-3 form_label" htmlFor="format">
                 Định dạng
               </label>
-              <select
-                className="col-8 form-control"
-                name="format"
-                id="format"
-                required
-              >
+              <select className="col-8 form-control" name="format" id="format" required>
                 <option value="single">Single Elimination</option>
               </select>
             </div>
@@ -71,12 +61,7 @@ function NewTournament(props) {
               <label className="col-3 form_label" htmlFor="start_time">
                 Start Time
               </label>
-              <input
-                className="col-8 form-control"
-                type="date"
-                name="start_time"
-                id="start_time"
-              />
+              <input className="col-8 form-control" type="date" name="start_time" id="start_time" />
             </div>
           </div>
 
