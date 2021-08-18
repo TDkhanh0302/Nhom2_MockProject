@@ -1,7 +1,7 @@
 import React from 'react';
 function Slider() {
   return (
-    <div className="p-5">
+    <div className="text-center p-5">
           <h2 className="p-3">Top Games</h2>
           <div>
             <img className='p-3' src="./homepage img/logo-aov.png" alt="Arena of Valor" width="200px"/>

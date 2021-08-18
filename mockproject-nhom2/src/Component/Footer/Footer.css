@@ -2,3 +2,6 @@
 footer  a{
     color: #ffffff80
 }
+Footer a:hover{
+    color: #fff
+}

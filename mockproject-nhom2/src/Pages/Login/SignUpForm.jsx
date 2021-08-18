@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.css'
 import Header from '../../Component/Header/Header'
+import Footer from '../../Component/Footer/Footer'
 
 const SignUpForm = () =>{
     return(
@@ -16,7 +17,7 @@ const SignUpForm = () =>{
             </div>
             <div className="right col col-lg-8 justify-content-flex-start">
               <div className='login-main'>
-                <h3 className='title-login'>Sign up</h3>
+                <h3 className='title-login'>Register</h3>
                 <p className='des'>Get started easily by signing up to manage your tournaments and events!</p>
                 <form>
                   <div className="mb-3">
@@ -32,10 +33,6 @@ const SignUpForm = () =>{
                     <label htmlFor="exampleInputPassword1" className="form-label">Nhập lại Password</label>
                     <input type="password" className="form-control" id="exampleInputPassword1" />
                   </div>
-                  <div className="mb-3 form-check">
-                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                    <label className="form-check-label" htmlFor="exampleCheck1">Remember me!</label>
-                  </div>
                   <button type="submit" className="btn btn-submit-form">Submit</button>
                 </form>
               </div>
@@ -43,7 +40,9 @@ const SignUpForm = () =>{
           </div>
           </div>
         }
+        <Footer/>
      </>
+     
     );
 }
 export default SignUpForm;

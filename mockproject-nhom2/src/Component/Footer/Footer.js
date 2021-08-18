@@ -2,7 +2,7 @@ import React from 'react'
 import './Footer.css'
 function Footer() {
   return (
-    <footer className="container-fluid bg-dark text-white-50 p-5">
+    <footer className="container-fluid bg-dark text-white-50 text-center p-5">
       <div className="row">
         <p>Product by Group 2</p>
       </div>

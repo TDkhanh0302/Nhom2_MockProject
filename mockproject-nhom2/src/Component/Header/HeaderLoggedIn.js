@@ -1,6 +1,6 @@
 import React from "react";
 import './Header.css'
-function Header() {
+function HeaderLoggedIn() {
   return (
     <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -39,12 +39,12 @@ function Header() {
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Login
+                Username
               </a>
             </li>
             <li className="nav-item sign-up">
               <a class="nav-link active"  href="#">
-                Register
+                Logout
               </a>
             </li>
           </ul>
@@ -54,4 +54,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderLoggedIn;
