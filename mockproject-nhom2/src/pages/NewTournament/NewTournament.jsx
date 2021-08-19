@@ -45,16 +45,13 @@ function NewTournament(props) {
                 <label className=" form_label" htmlFor="game">
                   Game
                 </label>
-                <select
-                  className="form-control col-8"
-                  name="game"
-                  id="game"
+                <input
+                  className="col-8 form-control"
+                  type="text"
+                  name="tournament_name"
+                  id="tournament_name"
                   required
-                >
-                  <option value="">Counter-Strike: Global Offensive</option>
-                  <option value="">League of Legends</option>
-                  <option value="">FIFA 14</option>
-                </select>
+                />
               </div>
 
               <div className="form_row row">
@@ -90,7 +87,7 @@ function NewTournament(props) {
               </div>
             </div>
 
-            <input className="form_btn" type="submit" value="SAVE AND CONTINUE" />
+            <button type="submit" class="btn view-btn m-3">Save and continue</button>
           </form>
         </div>
       </div>

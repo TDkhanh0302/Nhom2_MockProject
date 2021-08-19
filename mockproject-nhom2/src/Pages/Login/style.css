@@ -78,12 +78,10 @@ body {
 
 .btn-submit-form {
     background-color: #FF7324!important;
+    color: #fff;
 }
 
 .btn-submit-form:hover {
-    background-color: #f05700;
-}
-
-@media (max-width: 1199.98px) {
-
+    background-color: #f05700!important;
+    color: #fff;
 }
