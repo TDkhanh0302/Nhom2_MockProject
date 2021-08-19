@@ -10,5 +10,7 @@
 }
 .view-btn:hover{
     background-color:#f05700;
+    border-color: #f05700;
     color: #fff;
+    box-shadow: none;
 }
