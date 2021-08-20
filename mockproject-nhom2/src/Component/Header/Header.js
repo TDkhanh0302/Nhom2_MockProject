@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Header.css'
 function Header() {
   return (
     <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           <i className="fas fa-trophy"></i>
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,31 +22,31 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link acvite" href="#">
+              <Link className="nav-link acvite" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/tournaments">
                 All Tournament
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/your-tournaments">
                 Your Tournament
-              </a>
+              </Link>
             </li>
           </ul>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/login">
                 Login
-              </a>
+              </Link>
             </li>
             <li className="nav-item sign-up">
-              <a class="nav-link active"  href="#">
+              <Link className="nav-link active"  to="/sign-up">
                 Register
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -10,8 +10,8 @@ const SignUpForm = () =>{
         {
           <div className='loginForm'>
           <div className="container-flud d-block d-lg-flex">
-            <div className="left sign col col-lg-4">
-              <div className='text-des d-none d-lg-block'>
+            <div className="left sign d-none d-lg-block col col-lg-4">
+              <div className='text-des'>
                   <p className='des '>Join the millions who trust in us to manage their tournaments. More than 11,448,459 brackets created.</p>
               </div>
             </div>
@@ -21,12 +21,11 @@ const SignUpForm = () =>{
                 <p className='des'>Get started easily by signing up to manage your tournaments and events!</p>
                 <form>
                   <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required/>
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                    <label htmlFor="exampleInputUsername" className="form-label" >Username</label>
+                    <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required/>
                   </div>
                   <div className="mb-3">
-                    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+                    <label htmlFor="exampleInputPassword1" className="form-label" >Password</label>
                     <input type="password" className="form-control" id="exampleInputPassword1" required />
                   </div>
                   <div className="mb-3">
@@ -40,7 +39,6 @@ const SignUpForm = () =>{
           </div>
           </div>
         }
-        <Footer/>
      </>
      
     );

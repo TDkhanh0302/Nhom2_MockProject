@@ -47,8 +47,8 @@ const SettingForm = () => {
                 />
               </div>
             </div>
-            <button type="button" class="btn view-btn m-3">Save</button>
-            <button type="button" class="btn view-btn m-3">Delete Tournament</button>
+            <button type="button" className="btn view-btn m-3">Save</button>
+            <button type="button" className="btn view-btn m-3">Delete Tournament</button>
           </form>
         </div>
       </div>

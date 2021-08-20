@@ -2,31 +2,26 @@ body {
     font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
 }
 
-/* p {
-    color: #fff;
-} */
-
 .loginForm {
     background-color: #272a33;
 }
-
-.loginForm .left {
-    background: url('https://i.pinimg.com/564x/6f/50/6c/6f506cc07fd76e28da05fa5f021bf379.jpg') top right no-repeat;
-    background-size: cover;
-    height: calc(100vh-40px);
-    position: sticky;
-    flex-grow: 0;
-    flex-shrink: 0;
-}
-
-/* .loginForm .left.sign {
+.left {
     background: url('https://i.pinimg.com/564x/6f/50/6c/6f506cc07fd76e28da05fa5f021bf379.jpg') top right no-repeat;
     background-size: cover;
     height: calc(100vh - 50px);
     position: sticky;
     flex-grow: 0;
     flex-shrink: 0;
-} */
+}
+
+.left.sign {
+    background: url('https://i.pinimg.com/564x/8a/a2/05/8aa205e8f28d90fdc3e76bb69fb15f92.jpg') top right no-repeat;
+    background-size: cover;
+    height: calc(100vh - 50px);
+    position: sticky;
+    flex-grow: 0;
+    flex-shrink: 0;
+} 
 
 .loginForm .right {
     overflow: auto;
@@ -50,6 +45,7 @@ body {
 
 .des {
     font-size: 18px;
+    color: #fff;
 }
 
 .login-main {
