@@ -1,0 +1,16 @@
+.tournament-box{
+    color:#fff;
+    max-width: 350px;
+}
+.view-btn{
+    background-color: #FF7324;
+    border-color: #FF7324;
+    color: #fff;
+    line-height: 1.5;
+}
+.view-btn:hover{
+    background-color:#f05700;
+    border-color: #f05700;
+    color: #fff;
+    box-shadow: none;
+}

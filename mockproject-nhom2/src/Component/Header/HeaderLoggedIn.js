@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './Header.css'
-function Header() {
+function HeaderLoggedIn() {
   return (
     <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -39,13 +39,13 @@ function Header() {
           </ul>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" to="/login">
-                Login
-              </Link>
+              <a className="nav-link" href="#">
+                Username
+              </a>
             </li>
             <li className="nav-item sign-up">
-              <Link className="nav-link active"  to="/sign-up">
-                Register
+              <Link className="nav-link active"  to="/">
+                Logout
               </Link>
             </li>
           </ul>
@@ -55,4 +55,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderLoggedIn;
