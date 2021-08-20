@@ -3,6 +3,7 @@ import './styles.css';
 
 function NewTournament(props) {
   return (
+    
     <div className="wrap">
       <div className="head">
         <h2>New Tournament</h2>

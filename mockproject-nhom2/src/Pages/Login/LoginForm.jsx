@@ -4,6 +4,7 @@ import Header from '../../Component/Header/Header'
 const LoginForm = () =>{
     return(
         <>
+        
         <Header/>
         {
           <div className='loginForm'>
@@ -38,7 +39,7 @@ const LoginForm = () =>{
           </div>
           </div>
         }
-     </>
+      </>
     );
 }
 export default LoginForm;
