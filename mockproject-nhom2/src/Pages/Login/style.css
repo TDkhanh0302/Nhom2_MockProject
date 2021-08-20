@@ -15,7 +15,7 @@ body {
 }
 
 .left.sign {
-    background: url('https://i.pinimg.com/564x/8a/a2/05/8aa205e8f28d90fdc3e76bb69fb15f92.jpg') top right no-repeat !important;
+    background: url('https://i.pinimg.com/564x/8a/a2/05/8aa205e8f28d90fdc3e76bb69fb15f92.jpg') top right no-repeat;
     background-size: cover;
     height: calc(100vh - 50px);
     position: sticky;

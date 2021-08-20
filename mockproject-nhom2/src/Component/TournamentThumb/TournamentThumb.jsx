@@ -5,7 +5,7 @@ import './TournamentThumb.css'
 const TournamentThumb = () => {
   const history = useHistory();
   const viewTournament = () =>{
-    history.push('/tournament');//id thêm sau
+    history.push('/tournament/bracket');//id thêm sau
   }
   return (
     <div className='col-lg-4 sm-8'>
