@@ -44,7 +44,6 @@ const SignUpForm = () =>{
           </div>
           </div>
         }
-        <Footer/>
      </>
      
     );

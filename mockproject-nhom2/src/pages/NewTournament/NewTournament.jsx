@@ -2,8 +2,15 @@ import React from 'react';
 import './styles.css';
 import HeaderLoggedIn from '../../Component/Header/HeaderLoggedIn';
 import Footer from '../../Component/Footer/Footer';
+import { useHistory } from 'react-router-dom';
 
 function NewTournament(props) {
+  const history = useHistory();
+  const createTournament = () =>{
+    if(true){
+      history.push('/tournament/bracket');//+id thêm sau
+    }
+  }
   return (
     <div>
       <HeaderLoggedIn />
@@ -66,8 +73,8 @@ function NewTournament(props) {
                   <option value="single">Single Elimination</option>
                 </select>
               </div>
-              <div class="form-check form_row">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+              <div className="form-check form_row">
+                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                 <label className=" form_label" for="">
                   Include match for 3rd place
                 </label>
@@ -86,7 +93,7 @@ function NewTournament(props) {
               </div>
             </div>
 
-            <button type="submit" class="btn view-btn m-3">Save and continue</button>
+            <button type="submit" className="btn view-btn m-3" onClick={createTournament}>Save and continue</button>
           </form>
         </div>
       </div>

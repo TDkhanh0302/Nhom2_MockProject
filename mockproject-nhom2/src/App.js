@@ -14,25 +14,37 @@ import TournamentBracketLogged from './Pages/TournamentDetails/TournamentBracket
 import TournamentPlayer from './Pages/TournamentDetails/TournamentPlayer';
 import TournamentPlayerLogged from './Pages/TournamentDetails/TournamentPlayerLogged';
 import TournamentPlayerHost from './Pages/TournamentDetails/TournamentPlayerHost';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
+import SignUpForm from './Pages/Login/SignUpForm';
 function App() {
   return (
-    <div className="App">
-      <Home/>
-      <HomeLoggedIn/>
+    <Router>
+      <div className="App">
+        <Route exact path='/' component={Home}/>
+        <Route path='/tournaments' component={AllTournament}/>
+        <Route path = '/your-tournaments' component={YourTournament}/>
+        <Route path = '/login' component={LoginForm}/>
+        <Route path = '/sign-up' component={SignUpForm}/>
+        <Route path = '/add-tournament' component = {NewTournament}/>
+        <Route path = '/tournament/bracket' component = {TournamentBracketHost}/>
+        <Route path = '/tournament/players' component ={TournamentPlayerHost}/>
+        <Route path = '/tournament/setting' component = {TournamentSetting}/>
+        {/* Tạm thời để tất cả các component host */}
+
+      {/* <HomeLoggedIn/>
       <NewTournament/>
       <LoginForm/>
       <SignupForm/>
-      <AllTournament/>
       <AllTournamentLogged/>
-      <YourTournament/>
-      <TournamentSetting/>
+     
       <TournamentBracket/>
       <TournamentBracketHost/>
       <TournamentBracketLogged/>
       <TournamentPlayer/>
-      <TournamentPlayerLogged/>
-      <TournamentPlayerHost/>
+      
+      <TournamentPlayerHost/> */}
     </div>
+    </Router>
   );
 }
 

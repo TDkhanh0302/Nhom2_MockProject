@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './TournamentBanner.css'
 const TournamentBannerBracketHost = () => {
   return (
     <div>
-      <img src="./banner/tournament-banner.jpg" class="d-block w-100" alt="..." />
+      <img src="./banner/tournament-banner.jpg" className="d-block w-100" alt="..." />
       <div className="container-fluid tournament-banner">
         <div className="container">
           <div className="row pt-3">
@@ -29,24 +30,25 @@ const TournamentBannerBracketHost = () => {
             </div>
           </div>
           <div className="row">
-            <ul class="nav nav-tabs">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">
-                  <i class="fas fa-stream m-1"></i>
+            <ul className="nav nav-tabs">
+              <li className="nav-item">
+                <Link className="nav-link active" to="/tournament/bracket">
+                  {/* +id thêm sau */}
+                  <i className="fas fa-stream m-1"></i>
                   Bracket
-                </a>
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li className="nav-item">
+                <Link className="nav-link" to="/tournament/players">
                   <i className="far fa-user me-1"></i>
                   Player
-                </a>
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li className="nav-item">
+                <Link className="nav-link" to="/tournament/setting">
                   <i className="fas fa-cogs me-1"></i>
                   Settings
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
