@@ -6,11 +6,11 @@ import SettingForm from '../../Component/SettingForm/SettingForm';
 import TournamentBannerSetting from '../../Component/TournamentBanner/TournamentBannerSetting';
 import './TournamentDetails.css';
 const TournamentSetting = () => {
-  const { id } = useParams();
+  const { id, tournamentId } = useParams();
   return (
     <div>
       <Header />
-      <TournamentBannerSetting />
+      <TournamentBannerSetting tournamentId = {tournamentId}/>
       <div className="tournamentContent">
         <SettingForm id={id} />
       </div>

@@ -8,6 +8,7 @@ const TournamentThumb = (props) => {
   const viewTournament = () =>{
     history.push(`/tournament/bracket/${id}`);
     console.log(id);
+    return 
   }
   return (
     <div className='col-lg-4 sm-8'>

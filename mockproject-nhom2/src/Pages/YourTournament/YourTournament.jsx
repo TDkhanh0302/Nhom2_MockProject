@@ -11,7 +11,7 @@ const YourTournament = () => {
         if (item.user_id === userLogged.id) {
             return (
             <TournamentThumb
-                id={item.id} 
+                id={item.id}
                 tournamentName={item.name}
                 playersCount={item.player_count}
                 createDate={item.created_at}

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef } from 'react'
 import { TournamentsContext } from '../../contexts/TournamentsContext'
 import './PlayerAdd.css'
-const PlayerAdd = ({listplayers}) => {
+const PlayerAdd = ({listplayers,tournamentId}) => {
   const {writeDataTable} = useContext(TournamentsContext);
 
   const playerRef = useRef(null);
@@ -19,7 +19,7 @@ const PlayerAdd = ({listplayers}) => {
     const id = Date.now();
     const final_rank = 1;
     const name = playerRef.current.value;
-    const tournament_id = 0;
+    const tournament_id = tournamentId;
     let check = true;
     if(playerRef.current.value === '')
     {
@@ -29,7 +29,7 @@ const PlayerAdd = ({listplayers}) => {
       check = false;
     }
     for (let i = 0; i < listplayers.length; i++) {
-      if(listplayers[i].name === playerRef.current.value
+      if(listplayers[i].name === playerRef.current.value && listplayers[i].tournament_id === tournamentId
       ) {
         console.log("listplayers[i].name: "+listplayers[i].name );
         errPlayerNameRef.current.innerText = 'Tên người chơi đã tồn tại';

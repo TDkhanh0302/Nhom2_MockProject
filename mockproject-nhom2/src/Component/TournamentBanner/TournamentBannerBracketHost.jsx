@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './TournamentBanner.css'
 const TournamentBannerBracketHost = (props) => {
-  const {id,tournamentName,gameName,playersCount,createDate}=props
+  const {id,tournamentName,gameName,playersCount,createDate,tournamentId}=props
   return (
     <div>
       <img src="https://lh3.googleusercontent.com/rJM9dBj8rkNowIWlkcy4X6t5YgoMcKq5GxH9LWMA4eRpRE992k03vPOOjErcmB2am21baO8G5LO7CwrQfGxE=w1920-h969-rw" className="d-block w-100" alt="..." />
@@ -33,20 +33,20 @@ const TournamentBannerBracketHost = (props) => {
           <div className="row">
             <ul className="nav nav-tabs">
               <li className="nav-item">
-                <Link className="nav-link active" to="/tournament/bracket">
+                <Link className="nav-link active" to={"/tournament/bracket/" + tournamentId}>
                   {/* +id thêm sau */}
                   <i className="fas fa-stream m-1"></i>
                   Bracket
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/tournament/players">
+                <Link className="nav-link" to={"/tournament/players/" + tournamentId}>
                   <i className="far fa-user me-1"></i>
                   Player
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/tournament/setting">
+                <Link className="nav-link" to={"/tournament/setting/" + tournamentId}>
                   <i className="fas fa-cogs me-1"></i>
                   Settings
                 </Link>

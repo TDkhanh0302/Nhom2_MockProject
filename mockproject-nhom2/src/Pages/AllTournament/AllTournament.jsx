@@ -25,7 +25,6 @@ const AllTournament = () => {
                     gameName={item.game_name}
                 />
             </LazyLoad>
-
         )
     })
 

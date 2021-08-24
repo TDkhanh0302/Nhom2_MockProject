@@ -4,7 +4,7 @@ import { realtimeDB } from '../../firebase/firebaseConfig';
 import PlayerItem from './PlayerItem';
 import './PlayerList.css'
 
-const PlayerList = ({listplayers}) => {
+const PlayerList = ({listplayers,tournamentId}) => {
   const {writeDataTable} = useContext(TournamentsContext);
   const showListPlayer = listplayers?.map((player,index) =>{
     const onDelete = (index)=>{
@@ -13,7 +13,7 @@ const PlayerList = ({listplayers}) => {
       console.log(listplayers);
     }
   
-    if(player.tournament_id === 0)
+    if(player.tournament_id === tournamentId)
     {
       return(
           <PlayerItem index = {index} key = {player.id} player = {player} onDelete = {onDelete}/>
