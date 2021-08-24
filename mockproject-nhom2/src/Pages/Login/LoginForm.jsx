@@ -82,13 +82,7 @@ const LoginForm = () => {
                     />
                     <span ref={errPasswordRef} className="err_message"></span>
                   </div>
-                  <div className="mb-3 form-check">
-                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                    <label className="form-check-label" htmlFor="exampleCheck1">
-                      Remember me!
-                    </label>
-                  </div>
-                  <button onClick={handleSubmit} type="submit" className="btn btn-submit-form">
+                  <button onClick={handleSubmit} type="submit" className="btn btn-submit-form mt-2">
                     Submit
                   </button>
                 </form>

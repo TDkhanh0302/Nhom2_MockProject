@@ -66,6 +66,7 @@ const TournamentsContextProvider = ({ children }) => {
     writeDataTable,
     writeDataElement,
     setUser,
+    setUserLogged,
     setTournaments,
     setPlayers,
     setMatch,
@@ -74,7 +75,8 @@ const TournamentsContextProvider = ({ children }) => {
     players,
     match,
     users,
-    userLogged,
+    userLogged
+
   };
 
   return (

@@ -1,12 +1,12 @@
 import React from 'react'
-import HeaderLoggedIn from '../../Component/Header/HeaderLoggedIn'
+import Header from '../../Component/Header/Header'
 import Footer from '../../Component/Footer/Footer'
 import TournamentBannerBracket from '../../Component/TournamentBanner/TournamentBannerBracket'
 
 const TournamentBracketLogged = () => {
     return (
         <div>
-            <HeaderLoggedIn/>
+            <Header/>
             <TournamentBannerBracket/>
             <div className='tournamentContent'>
 
