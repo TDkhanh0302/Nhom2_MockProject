@@ -5,7 +5,7 @@ import { TournamentsContext } from '../../contexts/TournamentsContext';
 import { useHistory } from 'react-router-dom';
 
 const LoginForm = () => {
-  const { users, getUser, setUser } = useContext(TournamentsContext);
+  const { users, getUser, writeDataTable } = useContext(TournamentsContext);
   const history = useHistory();
 
   const usernameRef = useRef(null);
@@ -20,7 +20,7 @@ const LoginForm = () => {
 
     for (let i = 0; i < listUser.length; i++) {
       if (listUser[i].username === username && listUser[i].password == password) {
-        setUser(listUser[i]);
+        writeDataTable(listUser[i], 'userLogged');
         history.push('/');
         break;
       } else {

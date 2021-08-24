@@ -47,6 +47,16 @@ const TournamentsContextProvider = ({ children }) => {
     realtimeDB.ref(table_name).set(data);
   };
 
+  // add || update dữ liệu 1 phần tử trong bảng
+  const writeDataElement = (data, table_name, id) => {
+    realtimeDB.ref(table_name + id).set(data);
+  };
+
+  // get Tournament By Id
+  const getTournamentById = (tournament_id) => {
+    return tournaments.find((item) => item.id == tournament_id);
+  };
+
   const TournamentsContextData = {
     getUser,
     getUserLogged,
@@ -54,16 +64,19 @@ const TournamentsContextProvider = ({ children }) => {
     getPlayers,
     getMatch,
     writeDataTable,
+    writeDataElement,
     setUser,
     setUserLogged,
     setTournaments,
     setPlayers,
     setMatch,
+    getTournamentById,
     tournaments,
     players,
     match,
     users,
     userLogged
+
   };
 
   return (
