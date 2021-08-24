@@ -1,7 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import './Header.css'
+import React, { useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { TournamentsContext } from '../../contexts/TournamentsContext';
+import './Header.css';
 function HeaderLoggedIn() {
+  const { userLogged, getUserLogged } = useContext(TournamentsContext);
+
+  useEffect(() => {
+    getUserLogged();
+  }, []);
+
   return (
     <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -40,11 +47,11 @@ function HeaderLoggedIn() {
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Username
+                {userLogged?.username}
               </a>
             </li>
             <li className="nav-item sign-up">
-              <Link className="nav-link active"  to="/">
+              <Link className="nav-link active" to="/">
                 Logout
               </Link>
             </li>

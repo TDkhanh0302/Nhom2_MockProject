@@ -8,12 +8,19 @@ const TournamentsContextProvider = ({ children }) => {
   const [players, setPlayers] = useState(null);
   const [match, setMatch] = useState(null);
   const [users, setUser] = useState(null);
+  const [userLogged, setUserLogged] = useState(null);
 
   // gọi dữ liệu về và set các bảng dữ liệu vào các state tương ứng
   const getUser = () => {
     realtimeDB.ref('users').on('value', (snapshot) => {
       const state = snapshot.val();
       setUser(state);
+    });
+  };
+  const getUserLogged = () => {
+    realtimeDB.ref('userLogged').on('value', (snapshot) => {
+      const state = snapshot.val();
+      setUserLogged(state);
     });
   };
   const getTournaments = () => {
@@ -40,20 +47,34 @@ const TournamentsContextProvider = ({ children }) => {
     realtimeDB.ref(table_name).set(data);
   };
 
+  // add || update dữ liệu 1 phần tử trong bảng
+  const writeDataElement = (data, table_name, id) => {
+    realtimeDB.ref(table_name + id).set(data);
+  };
+
+  // get Tournament By Id
+  const getTournamentById = (tournament_id) => {
+    return tournaments.find((item) => item.id == tournament_id);
+  };
+
   const TournamentsContextData = {
     getUser,
+    getUserLogged,
     getTournaments,
     getPlayers,
     getMatch,
     writeDataTable,
+    writeDataElement,
     setUser,
     setTournaments,
     setPlayers,
     setMatch,
+    getTournamentById,
     tournaments,
     players,
     match,
     users,
+    userLogged,
   };
 
   return (

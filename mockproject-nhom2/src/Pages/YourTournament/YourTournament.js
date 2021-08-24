@@ -1,26 +1,26 @@
-import React from 'react'
-import HeaderLoggedIn from '../../Component/Header/HeaderLoggedIn'
-import Footer from '../../Component/Footer/Footer'
-import TournamentThumb from '../../Component/TournamentThumb/TournamentThumb'
+import React from 'react';
+import Footer from '../../Component/Footer/Footer';
+import Header from '../../Component/Header/Header';
+import TournamentThumb from '../../Component/TournamentThumb/TournamentThumb';
 const YourTournament = () => {
-    return (
-        <div>
-            <HeaderLoggedIn />
-            <div className="container-fluid  all-tournaments-list p-5">
-                <div className="container">
-                    <div className="row">
-                        <TournamentThumb/>
-                        <TournamentThumb/>
-                        <TournamentThumb/>
-                        <TournamentThumb/>
-                        <TournamentThumb/>
-                    </div>
-                </div>
-            </div>
-
-            <Footer />
+  return (
+    <div>
+      <Header />
+      <div className="container-fluid  all-tournaments-list p-5">
+        <div className="container">
+          <div className="row">
+            <TournamentThumb />
+            <TournamentThumb />
+            <TournamentThumb />
+            <TournamentThumb />
+            <TournamentThumb />
+          </div>
         </div>
-    )
-}
+      </div>
 
-export default YourTournament
+      <Footer />
+    </div>
+  );
+};
+
+export default YourTournament;
