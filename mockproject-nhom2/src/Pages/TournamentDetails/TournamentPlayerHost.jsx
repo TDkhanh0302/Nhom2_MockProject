@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderLoggedIn from '../../Component/Header/HeaderLoggedIn'
+import Header from '../../Component/Header/Header'
 import Footer from '../../Component/Footer/Footer'
 import TournamentBannerPlayerHost from '../../Component/TournamentBanner/TournamentBannerPlayerHost'
 import PlayerAdd from '../../Component/PlayerAdd/PlayerAdd'
@@ -7,7 +7,7 @@ import PlayerList from '../../Component/PlayerList/PlayerList'
 const TournamentPlayerHost = () => {
     return (
         <div>
-            <HeaderLoggedIn/>
+            <Header/>
             <TournamentBannerPlayerHost/>
             <div className='tournamentContent'>
                 <PlayerAdd/>
