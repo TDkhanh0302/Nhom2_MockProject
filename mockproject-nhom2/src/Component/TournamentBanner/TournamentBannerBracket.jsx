@@ -29,7 +29,7 @@ const TournamentBannerBracket = (props) => {
               </h6>
             </div>
           </div>
-          <div className="row">
+          <div className="row mt-3">
             <ul className="nav nav-tabs">
               <li className="nav-item">
                 <a className="nav-link active" href="#">

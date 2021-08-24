@@ -2,12 +2,14 @@ import React, { useContext, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { TournamentsContext } from '../../contexts/TournamentsContext';
 import './Header.css';
+import { useHistory } from 'react-router-dom';
 function Header() {
   const { userLogged, getUserLogged, writeDataTable } = useContext(TournamentsContext);
   const usernameRef = useRef(null);
   const logoutRef = useRef(null);
   const loginRef = useRef(null);
   const registerRef = useRef(null);
+  const history = useHistory();
 
   const checkUserLogged = () => {
     if (!userLogged) {
@@ -30,7 +32,14 @@ function Header() {
     loginRef.current.classList.remove('hidden');
     registerRef.current.classList.remove('hidden');
   };
-
+  const handleYourTournament = () => {
+    if(!userLogged){
+      alert('Please log in before enter your tournament!');
+      history.push('/login')
+    } else {
+      history.push('/your-tournaments')
+    }
+  }
   useEffect(() => {
     getUserLogged();
     checkUserLogged();
@@ -65,7 +74,7 @@ function Header() {
                 All Tournament
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" onClick={handleYourTournament}>
               <Link className="nav-link" to="/your-tournaments">
                 Your Tournament
               </Link>

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import './styles.css';
-import HeaderLoggedIn from '../../Component/Header/HeaderLoggedIn';
+import Header from '../../Component/Header/Header';
 import Footer from '../../Component/Footer/Footer';
 import { useHistory } from 'react-router-dom';
 import { TournamentsContext } from '../../contexts/TournamentsContext';
@@ -15,7 +15,7 @@ function NewTournament() {
   }
   return (
     <div>
-      <HeaderLoggedIn />
+      <Header/>
       <div className="wrap">
         <div className="head">
           <h2>New Tournament</h2>
