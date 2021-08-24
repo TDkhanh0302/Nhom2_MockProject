@@ -1,11 +1,12 @@
-import React from 'react';
-
+import React, { useContext, useEffect, useRef } from 'react';
 import './styles.css';
 import HeaderLoggedIn from '../../Component/Header/HeaderLoggedIn';
 import Footer from '../../Component/Footer/Footer';
 import { useHistory } from 'react-router-dom';
+import { TournamentsContext } from '../../contexts/TournamentsContext';
 
-function NewTournament(props) {
+
+function NewTournament() {
   const history = useHistory();
   const createTournament = () =>{
     if(true){
