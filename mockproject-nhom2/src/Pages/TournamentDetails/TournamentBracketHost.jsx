@@ -1,15 +1,17 @@
 import React from 'react'
-import HeaderLoggedIn from '../../Component/Header/HeaderLoggedIn'
+import Header from '../../Component/Header/Header'
 import Footer from '../../Component/Footer/Footer'
 import TournamentBannerBracketHost from '../../Component/TournamentBanner/TournamentBannerBracketHost'
+import { Bracket } from 'react-tournament-bracket'
 
 const TournamentBracketHost = () => {
+
+
     return (
         <div>
-            <HeaderLoggedIn/>
+            <Header/>
             <TournamentBannerBracketHost/>
             <div className='tournamentContent'>
-
             </div>
             <Footer/>
         </div>

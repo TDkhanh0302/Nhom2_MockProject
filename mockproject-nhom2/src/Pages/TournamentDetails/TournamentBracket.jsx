@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext, useEffect, useRef } from 'react';
+import { TournamentsContext } from '../../contexts/TournamentsContext';
 import Header from '../../Component/Header/Header'
 import Footer from '../../Component/Footer/Footer'
 import TournamentBannerBracket from '../../Component/TournamentBanner/TournamentBannerBracket'

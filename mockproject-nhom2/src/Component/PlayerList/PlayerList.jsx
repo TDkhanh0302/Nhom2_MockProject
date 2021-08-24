@@ -1,17 +1,31 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
+import { TournamentsContext } from '../../contexts/TournamentsContext';
+import { realtimeDB } from '../../firebase/firebaseConfig';
+import PlayerItem from './PlayerItem';
 import './PlayerList.css'
-const PlayerList = () => {
-  return (
-    <div className="container pt-3">
 
-      <div className="row">
-        <p className="col-sm-3 player-name me-2">
-          Player Name
-        </p>
-        <button className="col-sm-2 col-md-1 btn view-btn delete-btn" type='button' ><i className="fa fa-trash"></i></button>
-      </div>
-    </div>
+const PlayerList = ({listplayers}) => {
+  const {writeDataTable} = useContext(TournamentsContext);
+  const showListPlayer = listplayers?.map((player,index) =>{
+    const onDelete = (index)=>{
+      listplayers.splice(index, 1);
+      writeDataTable(listplayers,'players');
+      console.log(listplayers);
+    }
+  
+    if(player.tournament_id === 0)
+    {
+      return(
+          <PlayerItem index = {index} key = {player.id} player = {player} onDelete = {onDelete}/>
+      )
+    }
+  })
+  
+  return(
+    <>
+      {showListPlayer}
+    </>
   )
-}
+};
 
 export default PlayerList

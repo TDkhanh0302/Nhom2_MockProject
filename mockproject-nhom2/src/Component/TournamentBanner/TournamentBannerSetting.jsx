@@ -4,7 +4,7 @@ import './TournamentBanner.css'
 const TournamentBannerSetting = () => {
   return (
     <div>
-      <img src="./banner/tournament-banner.jpg" className="d-block w-100" alt="..." />
+      <img src="https://lh3.googleusercontent.com/rJM9dBj8rkNowIWlkcy4X6t5YgoMcKq5GxH9LWMA4eRpRE992k03vPOOjErcmB2am21baO8G5LO7CwrQfGxE=w1920-h969-rw" className="d-block w-100" alt="..." />
       <div className="container-fluid tournament-banner">
         <div className="container">
           <div className="row pt-3">
