@@ -111,7 +111,7 @@ const PlayerItem = ({ player, onDelete, index, listplayers, tournamentId,onEditP
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
                 Close
               </button>
-              <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={hanldeEditPlayer}>
+              <button type="button" className="btn view-btn" data-bs-dismiss="modal" onClick={hanldeEditPlayer}>
                 Save changes
               </button>
             </div>

@@ -23,7 +23,7 @@ const TournamentBannerBracketHost = (props) => {
   
   return (
     <div>
-      <img src="https://assets.challonge.com/assets/community_default_banners/default-cover-1-131d838501be46b4dc4ccf812fb3f7829fc8d2ff99d0e6dc60627288a696f341.svg"" className="d-block w-100" alt="..." />
+      <img src="https://assets.challonge.com/assets/community_default_banners/default-cover-1-131d838501be46b4dc4ccf812fb3f7829fc8d2ff99d0e6dc60627288a696f341.svg" className="d-block w-100" alt="..." />
       <div className="container-fluid tournament-banner">
         <div className="container">
           <div className="row pt-3">
