@@ -1,18 +1,19 @@
 import React from 'react'
 import Header from '../../Component/Header/Header'
 import Background from '../../Component/Background/Backgroud'
-import Slider from '../../Component/Slider/Slider'
+import TopGame from '../../Component/Slider/TopGame'
 import Footer from '../../Component/Footer/Footer'
+import Group from '../../Component/Slider/Group'
 function Home() {
-    return (
-      <div>
-        <Header/>
-        <Background/>
-        <Slider/>
-        <Footer/>
-      </div>
-    );
-  }
-  
-  export default  Home
-  
+  return (
+    <div>
+      <Header />
+      <Background />
+      <TopGame/>
+      <Group/>
+      <Footer/>
+    </div>
+  );
+}
+
+export default Home
