@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { TournamentsContext } from '../../contexts/TournamentsContext';
 import './TournamentBanner.css';
 const TournamentBannerPlayerHost = (props) => {
   const { tournamentId, currentTour } = props;
+  const {userLogged,getUserLogged} = useContext(TournamentsContext);
+  const settingRef = useRef(null);
 
+  const checkHost = () =>{
+    if (!userLogged|| currentTour.user_id !== userLogged.id)
+    {
+      settingRef.current.classList.add('hidden');
+    }
+    else{
+      settingRef.current.classList.remove('hidden');
+    }
+  }
+  useEffect(() => {
+
+    getUserLogged();
+    checkHost();
+  }, []);
+  
   return (
     <div>
       <img
@@ -52,7 +70,7 @@ const TournamentBannerPlayerHost = (props) => {
                   Player
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item" ref={settingRef}>
                 <Link className="nav-link" to={'/tournament/setting/' + tournamentId}>
                   <i className="fas fa-cogs me-1"></i>
                   Settings

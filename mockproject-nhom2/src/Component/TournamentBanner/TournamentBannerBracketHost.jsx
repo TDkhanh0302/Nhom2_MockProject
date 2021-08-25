@@ -1,9 +1,25 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { TournamentsContext } from '../../contexts/TournamentsContext';
 import './TournamentBanner.css'
 const TournamentBannerBracketHost = (props) => {
   const {tournamentId,currentTour}=props;
+  const {userLogged,getUserLogged} = useContext(TournamentsContext);
+  const settingRef = useRef(null);
+
+  const checkHost = () =>{
+    if (!userLogged|| currentTour.user_id !== userLogged.id)
+    {
+      settingRef.current.classList.add('hidden');
+    }
+    else{
+      settingRef.current.classList.remove('hidden');
+    }
+  }
+  useEffect(() => {
+    getUserLogged();
+    checkHost();
+  }, []);
   
   return (
     <div>
@@ -41,7 +57,6 @@ const TournamentBannerBracketHost = (props) => {
             <ul className="nav nav-tabs">
               <li className="nav-item">
                 <Link className="nav-link active" to={"/tournament/bracket/" + tournamentId}>
-
                   <i className="fas fa-stream m-1"></i>
                   Bracket
                 </Link>
@@ -52,7 +67,7 @@ const TournamentBannerBracketHost = (props) => {
                   Player
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item" ref={settingRef}>
                 <Link className="nav-link" to={"/tournament/setting/" + tournamentId}>
                   <i className="fas fa-cogs me-1"></i>
                   Settings

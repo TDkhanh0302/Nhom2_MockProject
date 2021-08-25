@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom'
 import { TournamentsContext } from '../../contexts/TournamentsContext'
 
 const TournamentBracketHost = () => {
+    
     const {tournamentId} = useParams(); 
     const {getTournamentById,getTournaments} = useContext(TournamentsContext);
     const currentTour = getTournamentById(tournamentId);

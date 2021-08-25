@@ -5,8 +5,31 @@ import './PlayerList.css';
 const PlayerItem = ({ player, onDelete, index, listplayers, tournamentId,onEditPlayer }) => {
   const editPlayerRef = useRef(null);
   const errEditNameRef = useRef(null);
-  const history = useHistory();
 
+  const {getTournamentById,userLogged,getUserLogged} = useContext(TournamentsContext);
+
+  const history = useHistory();
+  const currentTour = getTournamentById(tournamentId);
+  const deleteButtonRef = useRef(null);
+  const editButtonRef = useRef(null);
+
+  const checkHost  = () =>{
+    if (!userLogged|| currentTour?.user_id !== userLogged.id){
+      deleteButtonRef.current.classList.add('hidden');
+      editButtonRef.current.classList.add('hidden');
+    }
+    else
+    {
+      deleteButtonRef.current.classList.remove('hidden');
+      editButtonRef.current.classList.remove('hidden');
+    }
+    
+  }
+  
+  useEffect(() => { 
+    getUserLogged();
+    checkHost();
+  }, []);
   const hanldeDeletePlayer = (event) => {
     event.preventDefault();
     onDelete(index);
@@ -67,6 +90,7 @@ const PlayerItem = ({ player, onDelete, index, listplayers, tournamentId,onEditP
       <button
         className="col-sm-2 col-md-1 btn ms-2 me-2 view-btn delete-btn"
         type="button"
+        ref = {editButtonRef}
         data-bs-toggle="modal"
         data-bs-target={"#exampleModal"+index}
       >
@@ -114,6 +138,7 @@ const PlayerItem = ({ player, onDelete, index, listplayers, tournamentId,onEditP
       <button
         className="col-sm-2 col-md-1 btn view-btn delete-btn"
         type="button"
+        ref = {deleteButtonRef}
         onClick={hanldeDeletePlayer}
       >
         <i className="fa fa-trash"></i>
