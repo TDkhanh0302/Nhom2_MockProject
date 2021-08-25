@@ -5,8 +5,7 @@ import 'firebase/database';
 const firebaseConfig = {
   apiKey: 'AIzaSyBPJH4YX1bWBUDqU1cLwqafLcgRWADXL98',
   authDomain: 'tournamentmanager-8bdd5.firebaseapp.com',
-  databaseURL:
-    'https://tournamentmanager-8bdd5-default-rtdb.asia-southeast1.firebasedatabase.app',
+  databaseURL: 'https://tournamentmanager-8bdd5-default-rtdb.asia-southeast1.firebasedatabase.app',
   projectId: 'tournamentmanager-8bdd5',
   storageBucket: 'tournamentmanager-8bdd5.appspot.com',
   messagingSenderId: '902806229936',

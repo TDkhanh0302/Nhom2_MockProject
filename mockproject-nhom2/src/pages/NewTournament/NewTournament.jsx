@@ -5,17 +5,16 @@ import Footer from '../../Component/Footer/Footer';
 import { useHistory } from 'react-router-dom';
 import { TournamentsContext } from '../../contexts/TournamentsContext';
 
-
 function NewTournament() {
   const history = useHistory();
-  const createTournament = () =>{
-    if(true){
-      history.push('/tournament/bracket');//+id thêm sau
+  const createTournament = () => {
+    if (true) {
+      history.push('/tournament/bracket'); //+id thêm sau
     }
-  }
+  };
   return (
     <div>
-      <Header/>
+      <Header />
       <div className="wrap">
         <div className="head">
           <h2>New Tournament</h2>
@@ -66,17 +65,17 @@ function NewTournament() {
                 <label className=" form_label" htmlFor="format">
                   Type
                 </label>
-                <select
-                  className="col-8 form-control"
-                  name="format"
-                  id="format"
-                  required
-                >
+                <select className="col-8 form-control" name="format" id="format" required>
                   <option value="single">Single Elimination</option>
                 </select>
               </div>
               <div className="form-check form_row">
-                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
                 <label className=" form_label" for="">
                   Include match for 3rd place
                 </label>
@@ -95,7 +94,9 @@ function NewTournament() {
               </div>
             </div>
 
-            <button type="submit" className="btn view-btn m-3" onClick={createTournament}>Save and continue</button>
+            <button type="submit" className="btn view-btn m-3" onClick={createTournament}>
+              Save and continue
+            </button>
           </form>
         </div>
       </div>

@@ -1,10 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './TournamentBanner.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './TournamentBanner.css';
 const TournamentBannerPlayer = () => {
   return (
     <div>
-      <img src="https://lh3.googleusercontent.com/rJM9dBj8rkNowIWlkcy4X6t5YgoMcKq5GxH9LWMA4eRpRE992k03vPOOjErcmB2am21baO8G5LO7CwrQfGxE=w1920-h969-rw" className="d-block w-100" alt="..." />
+      <img
+        src="https://lh3.googleusercontent.com/rJM9dBj8rkNowIWlkcy4X6t5YgoMcKq5GxH9LWMA4eRpRE992k03vPOOjErcmB2am21baO8G5LO7CwrQfGxE=w1920-h969-rw"
+        className="d-block w-100"
+        alt="..."
+      />
       <div className="container-fluid tournament-banner">
         <div className="container">
           <div className="row pt-3">
@@ -36,7 +40,7 @@ const TournamentBannerPlayer = () => {
                   {/* id thêm sau và xét điều kiện the*/}
                   <i className="fas fa-stream m-1"></i>
                   Bracket
-                  </Link>
+                </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link active" to="/tournament/players">
@@ -49,9 +53,9 @@ const TournamentBannerPlayer = () => {
           </div>
         </div>
       </div>
-      <div className='abc'></div>
+      <div className="abc"></div>
     </div>
-  )
-}
+  );
+};
 
-export default TournamentBannerPlayer
+export default TournamentBannerPlayer;

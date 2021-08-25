@@ -3,7 +3,6 @@ import { realtimeDB } from '../firebase/firebaseConfig';
 
 export const TournamentsContext = createContext();
 
-
 const TournamentsContextProvider = ({ children }) => {
   const [tournaments, setTournaments] = useState(null);
   const [players, setPlayers] = useState(null);
@@ -55,7 +54,7 @@ const TournamentsContextProvider = ({ children }) => {
 
   // get Tournament By Id
   const getTournamentById = (tournament_id) => {
-    return tournaments.find((item) => item.id === tournament_id);
+    return tournaments?.find((item) => item.id == tournament_id);
   };
 
   const TournamentsContextData = {
@@ -76,8 +75,7 @@ const TournamentsContextProvider = ({ children }) => {
     players,
     match,
     users,
-    userLogged
-
+    userLogged,
   };
 
   return (

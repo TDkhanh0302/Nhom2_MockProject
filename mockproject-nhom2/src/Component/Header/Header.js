@@ -33,13 +33,13 @@ function Header() {
     registerRef.current.classList.remove('hidden');
   };
   const handleYourTournament = () => {
-    if(!userLogged){
+    if (!userLogged) {
       alert('Please log in before enter your tournament!');
-      history.push('/login')
+      history.push('/login');
     } else {
-      history.push('/your-tournaments')
+      history.push('/your-tournaments');
     }
-  }
+  };
   useEffect(() => {
     getUserLogged();
     checkUserLogged();

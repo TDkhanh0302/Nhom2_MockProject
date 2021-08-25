@@ -25,19 +25,6 @@ function App() {
           <Route path="/tournament/players/:tournamentId" component={TournamentPlayerHost} />
           <Route path="/tournament/setting/:tournamentId" component={TournamentSetting} />
           {/* Tạm thời để tất cả các component host */}
-
-          {/* <HomeLoggedIn/>
-      <NewTournament/>
-      <LoginForm/>
-      <SignupForm/>
-      <AllTournamentLogged/>
-     
-      <TournamentBracket/>
-      <TournamentBracketHost/>
-      <TournamentBracketLogged/>
-      <TournamentPlayer/>
-      
-      <TournamentPlayerHost/> */}
         </Switch>
       </Router>
     </TournamentsContextProvider>
