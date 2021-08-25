@@ -4,7 +4,7 @@ import { TournamentsContext } from '../../contexts/TournamentsContext';
 import './PlayerList.css';
 const PlayerItem = ({ player, onDelete, index, listplayers, tournamentId,onEditPlayer }) => {
   const editPlayerRef = useRef(null);
-  const errEditNameRef = useRef(null);
+
 
   const {getTournamentById,userLogged,getUserLogged} = useContext(TournamentsContext);
 
@@ -40,49 +40,33 @@ const PlayerItem = ({ player, onDelete, index, listplayers, tournamentId,onEditP
 
     let check = true;
     if (editPlayerRef.current.value === '') {
-      errEditNameRef.current.innerText = 'Vui lòng điền tên người chơi';
-      errEditNameRef.current.classList.add('invalid');
+      alert('Vui lòng điền tên muốn đổi');
       editPlayerRef.current.focus();
       check = false;
     }
-    if (editPlayerRef.current.value === player.name) {
-      errEditNameRef.current.innerText = 'Tên không thay đổi';
-      errEditNameRef.current.classList.add('invalid');
+    if (editPlayerRef.current.value === listplayers[index].name) {
+      alert('Tên không thay đổi');
       editPlayerRef.current.focus();
       check = false;
     }
-
-    for (let i = 0; i < listplayers.length; i++) {
-      if (
-        listplayers[i].name === editPlayerRef.current.value &&
-        listplayers[i].tournament_id === tournamentId
-      ) {
-        errEditNameRef.current.innerText = 'Người chơi đã tồn tại';
-        errEditNameRef.current.classList.add('invalid');
-        editPlayerRef.current.focus();
-        check = false;
-        break;
+    if(check){
+      for (let i = 0; i < listplayers.length; i++) {
+        if (
+          listplayers[i].name === editPlayerRef.current.value &&
+          listplayers[i].tournament_id === tournamentId
+        ) {
+          alert('Tên vừa nhập đã tồn tại');
+          editPlayerRef.current.focus();
+          check = false;
+          break;
+        }
       }
     }
-
     if (check) {
       onEditPlayer(index,editPlayerRef.current.value);
-      history.go(0);
     }
     editPlayerRef.current.value = '';
   };
-  const onInputData = () => {
-    editPlayerRef.current.oninput = () => {
-      errEditNameRef.current.innerText = '';
-      errEditNameRef.current.classList.remove('invalid');
-    };
-  };
-
-  useEffect(() => {
-    editPlayerRef.current.onblur = () => {
-      onInputData();
-    };
-  }, []);
 
   return (
     <div className="row">
@@ -122,13 +106,12 @@ const PlayerItem = ({ player, onDelete, index, listplayers, tournamentId,onEditP
                 className="form-control edit-name-input"
                 ref={editPlayerRef}
               ></input>
-              <span ref={errEditNameRef} className="err_message"></span>
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
                 Close
               </button>
-              <button type="button" className="btn btn-primary" onClick={hanldeEditPlayer}>
+              <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={hanldeEditPlayer}>
                 Save changes
               </button>
             </div>
