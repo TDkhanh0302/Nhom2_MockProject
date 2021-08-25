@@ -82,9 +82,9 @@ function Header() {
           </ul>
           <ul className="navbar-nav">
             <li ref={usernameRef} className="nav-item hidden">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/your-tournaments">
                 {userLogged?.username}
-              </a>
+              </Link>
             </li>
             <li onClick={handleLogout} ref={logoutRef} className="nav-item sign-up hidden">
               <Link className="nav-link active" to="/">
