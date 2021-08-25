@@ -1,11 +1,9 @@
-import React, { useContext, useEffect, useRef } from 'react';
-import { TournamentsContext } from '../../contexts/TournamentsContext';
+import React from 'react'
 import Header from '../../Component/Header/Header'
 import Footer from '../../Component/Footer/Footer'
 import TournamentBannerBracket from '../../Component/TournamentBanner/TournamentBannerBracket'
 
-const TournamentBracket = () => {
-    const { tournaments, getTournamentsByID} = useContext(TournamentsContext);
+const TournamentBracketLogged = () => {
     return (
         <div>
             <Header/>
@@ -18,4 +16,4 @@ const TournamentBracket = () => {
     )
 }
 
-export default TournamentBracket
+export default TournamentBracketLogged

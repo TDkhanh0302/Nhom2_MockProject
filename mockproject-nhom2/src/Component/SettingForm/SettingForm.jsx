@@ -1,22 +1,49 @@
 import React, { useContext, useEffect, useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 import { TournamentsContext } from '../../contexts/TournamentsContext';
 
 const SettingForm = ({ id }) => {
-  const { getTournaments, tournaments, getTournamentById } = useContext(TournamentsContext);
+  const { getTournaments, tournaments, getTournamentById, writeDataTable } =
+    useContext(TournamentsContext);
   const nameRef = useRef(null);
   const descriptionRef = useRef(null);
   const gameRef = useRef(null);
+  const history = useHistory();
+
+  const updateTournament = () => {
+    const tournamentFromId = [...tournaments];
+    for (let i = 0; i < tournamentFromId.length; i++) {
+      if (tournamentFromId[i].id == id) {
+        tournamentFromId[i].name = nameRef.current.value;
+        tournamentFromId[i].description = descriptionRef.current.value;
+        tournamentFromId[i].game_name = gameRef.current.value;
+      }
+    }
+    writeDataTable(tournamentFromId, 'tournaments');
+    history.push(`/tournament/bracket/${id}`);
+  };
+
+  const deleteTournament = () => {
+    let arrTournaments = [...tournaments];
+    const newState = arrTournaments.filter((item) => {
+      return item.id != id;
+    });
+    if (window.confirm('Delete this tournaments?')) {
+      writeDataTable(newState, 'tournaments');
+      history.push('/your-tournaments');
+    }
+  };
 
   useEffect(() => {
     getTournaments();
   }, []);
 
-  // useEffect(() => {
-  //   const tournamentFromId = getTournamentById(id)
-  //   nameRef.current.value = tournamentFromId.name;
-  //   descriptionRef.current.value = tournamentFromId.description;
-  //   gameRef.current.value = tournamentFromId.game_name;
-  // }, [id])
+  useEffect(() => {
+    let tournamentFromId = getTournamentById(id);
+    nameRef.current.value = tournamentFromId?.name;
+    descriptionRef.current.value = tournamentFromId?.description;
+    gameRef.current.value = tournamentFromId?.game_name;
+  }, [id]);
 
   return (
     <div>
@@ -66,10 +93,10 @@ const SettingForm = ({ id }) => {
                 />
               </div>
             </div>
-            <button type="button" className="btn view-btn m-3">
+            <button onClick={updateTournament} type="button" className="btn view-btn m-3">
               Save
             </button>
-            <button type="button" className="btn view-btn m-3">
+            <button onClick={deleteTournament} type="button" className="btn view-btn m-3">
               Delete Tournament
             </button>
           </form>

@@ -1,3 +1,7 @@
 .all-tournaments-list{
   background-color: #3a404e;
+<<<<<<< HEAD
+=======
+  min-height: calc(100vh - 256px)
+>>>>>>> e951a62494abf554cb02676197ef5677120c0a1e
 }

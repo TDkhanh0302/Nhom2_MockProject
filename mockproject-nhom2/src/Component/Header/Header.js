@@ -33,13 +33,14 @@ function Header() {
     registerRef.current.classList.remove('hidden');
   };
   const handleYourTournament = () => {
-    if (!userLogged) {
+    if(!userLogged){
       alert('Please log in before enter your tournament!');
-      history.push('/login');
+      history.push('/login')
     } else {
       history.push('/your-tournaments');
     }
-  };
+  }
+  
   useEffect(() => {
     getUserLogged();
     checkUserLogged();
@@ -82,9 +83,9 @@ function Header() {
           </ul>
           <ul className="navbar-nav">
             <li ref={usernameRef} className="nav-item hidden">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/your-tournaments">
                 {userLogged?.username}
-              </a>
+              </Link>
             </li>
             <li onClick={handleLogout} ref={logoutRef} className="nav-item sign-up hidden">
               <Link className="nav-link active" to="/">

@@ -4,28 +4,25 @@ import { TournamentsContext } from '../../contexts/TournamentsContext';
 import './TournamentBanner.css';
 const TournamentBannerPlayerHost = (props) => {
   const { tournamentId, currentTour } = props;
-  const {userLogged,getUserLogged} = useContext(TournamentsContext);
+  const { userLogged, getUserLogged } = useContext(TournamentsContext);
   const settingRef = useRef(null);
 
-  const checkHost = () =>{
-    if (!userLogged|| currentTour.user_id !== userLogged.id)
-    {
+  const checkHost = () => {
+    if (!userLogged || currentTour.user_id !== userLogged.id) {
       settingRef.current.classList.add('hidden');
-    }
-    else{
+    } else {
       settingRef.current.classList.remove('hidden');
     }
-  }
+  };
   useEffect(() => {
-
     getUserLogged();
     checkHost();
   }, []);
-  
+
   return (
     <div>
       <img
-        src="https://lh3.googleusercontent.com/rJM9dBj8rkNowIWlkcy4X6t5YgoMcKq5GxH9LWMA4eRpRE992k03vPOOjErcmB2am21baO8G5LO7CwrQfGxE=w1920-h969-rw"
+        src="https://assets.challonge.com/assets/community_default_banners/default-cover-1-131d838501be46b4dc4ccf812fb3f7829fc8d2ff99d0e6dc60627288a696f341.svg"
         className="d-block w-100"
         alt="..."
       />

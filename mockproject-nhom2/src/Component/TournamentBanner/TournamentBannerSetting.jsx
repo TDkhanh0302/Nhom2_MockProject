@@ -7,7 +7,7 @@ const TournamentBannerSetting = (props) => {
   return (
     <div>
       <img
-        src="https://lh3.googleusercontent.com/rJM9dBj8rkNowIWlkcy4X6t5YgoMcKq5GxH9LWMA4eRpRE992k03vPOOjErcmB2am21baO8G5LO7CwrQfGxE=w1920-h969-rw"
+        src="https://assets.challonge.com/assets/community_default_banners/default-cover-1-131d838501be46b4dc4ccf812fb3f7829fc8d2ff99d0e6dc60627288a696f341.svg"
         className="d-block w-100"
         alt="..."
       />
@@ -27,7 +27,7 @@ const TournamentBannerSetting = (props) => {
             </div>
             <div className="col-lg-2 col-sm-4">
               <h6>
-                <i className="far fa-user me-1"></i> 
+                <i className="far fa-user me-1"></i>
                 Paticipants: {currentTour?.player_count}
               </h6>
             </div>

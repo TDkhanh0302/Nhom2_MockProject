@@ -7,8 +7,8 @@ import TournamentBannerSetting from '../../Component/TournamentBanner/Tournament
 import { TournamentsContext } from '../../contexts/TournamentsContext';
 import './TournamentDetails.css';
 const TournamentSetting = () => {
-  const { id, tournamentId } = useParams();
-  const { players, getPlayers, getTournamentById, getTournaments } = useContext(TournamentsContext);
+  const { tournamentId } = useParams();
+  const { getTournamentById, getTournaments } = useContext(TournamentsContext);
   const currentTour = getTournamentById(tournamentId);
   useEffect(() => {
     getTournaments();
@@ -21,7 +21,7 @@ const TournamentSetting = () => {
         tournamentId={tournamentId} 
       />
       <div className="tournamentContent">
-        <SettingForm id={id} />
+        <SettingForm id={tournamentId} />
       </div>
       <Footer />
     </div>
