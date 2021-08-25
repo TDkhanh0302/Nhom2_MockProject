@@ -1,19 +1,19 @@
-import React from 'react'
-import Header from '../../Component/Header/Header'
-import Footer from '../../Component/Footer/Footer'
-import TournamentBannerBracketHost from '../../Component/TournamentBanner/TournamentBannerBracketHost'
+import React from 'react';
+import Header from '../../Component/Header/Header';
+import Footer from '../../Component/Footer/Footer';
+import TournamentBannerBracketHost from '../../Component/TournamentBanner/TournamentBannerBracketHost';
+import { useParams } from 'react-router-dom';
 
 const TournamentBracketHost = () => {
-    return (
-        <div>
-            <Header/>
-            <TournamentBannerBracketHost/>
-            <div className='tournamentContent'>
+  const { id } = useParams();
+  return (
+    <div>
+      <Header />
+      <TournamentBannerBracketHost id={id} />
+      <div className="tournamentContent"></div>
+      <Footer />
+    </div>
+  );
+};
 
-            </div>
-            <Footer/>
-        </div>
-    )
-}
-
-export default TournamentBracketHost
+export default TournamentBracketHost;
