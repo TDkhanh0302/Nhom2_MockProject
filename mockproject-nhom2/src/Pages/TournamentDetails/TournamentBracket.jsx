@@ -5,6 +5,7 @@ import Footer from '../../Component/Footer/Footer'
 import TournamentBannerBracket from '../../Component/TournamentBanner/TournamentBannerBracket'
 
 const TournamentBracket = () => {
+    const { tournaments, getTournamentsByID} = useContext(TournamentsContext);
     return (
         <div>
             <Header/>
