@@ -37,9 +37,10 @@ function Header() {
       alert('Please log in before enter your tournament!');
       history.push('/login')
     } else {
-      history.push('/your-tournaments')
+      history.push('/your-tournaments');
     }
   }
+  
   useEffect(() => {
     getUserLogged();
     checkUserLogged();

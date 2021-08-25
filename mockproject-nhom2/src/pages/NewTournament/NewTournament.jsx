@@ -107,8 +107,9 @@ function NewTournament() {
                 </label>
               </div>
             </div>
-
-            <button type="submit" className="btn view-btn m-3" onClick={createTournament}>Save and continue</button>
+            <button type="submit" className="btn view-btn m-3" onClick={createTournament}>
+              Save and continue
+            </button>
           </form>
         </div>
       </div>

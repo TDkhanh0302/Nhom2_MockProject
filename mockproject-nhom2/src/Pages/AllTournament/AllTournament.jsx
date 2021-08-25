@@ -14,6 +14,7 @@ const AllTournament = () => {
         tournamentName={item.name}
         playersCount={item.player_count}
         gameName={item.game_name}
+        host = {item.user_id}
       />
     );
   });

@@ -21,23 +21,10 @@ function App() {
           <Route path="/login" component={LoginForm} />
           <Route path="/sign-up" component={SignUpForm} />
           <Route path="/add-tournament" component={NewTournament} />
-          <Route path="/tournament/bracket/:id" component={TournamentBracketHost} />
-          <Route path="/tournament/players/:id" component={TournamentPlayerHost} />
-          <Route path="/tournament/setting/:id" component={TournamentSetting} />
+          <Route path="/tournament/bracket/:tournamentId" component={TournamentBracketHost} />
+          <Route path="/tournament/players/:tournamentId" component={TournamentPlayerHost} />
+          <Route path="/tournament/setting/:tournamentId" component={TournamentSetting} />
           {/* Tạm thời để tất cả các component host */}
-
-          {/* <HomeLoggedIn/>
-      <NewTournament/>
-      <LoginForm/>
-      <SignupForm/>
-      <AllTournamentLogged/>
-     
-      <TournamentBracket/>
-      <TournamentBracketHost/>
-      <TournamentBracketLogged/>
-      <TournamentPlayer/>
-      
-      <TournamentPlayerHost/> */}
         </Switch>
       </Router>
     </TournamentsContextProvider>
