@@ -84,7 +84,7 @@ const SignUpForm = () => {
                 <p className="des">
                   Get started easily by signing up to manage your tournaments and events!
                 </p>
-                <form method="GET">
+                <form onSubmit={handleSubmit} method="GET">
                   <div className="mb-3">
                     <label htmlFor="username" className="form-label">
                       Username
@@ -123,9 +123,7 @@ const SignUpForm = () => {
                     />
                     <span ref={errPasswordRef} className="err_message"></span>
                   </div>
-                  <button onClick={handleSubmit} className="btn btn-submit-form">
-                    Submit
-                  </button>
+                  <button className="btn btn-submit-form">Submit</button>
                 </form>
               </div>
             </div>
