@@ -50,7 +50,7 @@ function Header() {
     <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          <i className="fas fa-trophy"></i>
+          <img src="https://live.staticflickr.com/65535/51403292507_1522328405_n.jpg" height="32px"/>
         </Link>
         <button
           className="navbar-toggler"
