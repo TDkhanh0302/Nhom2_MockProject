@@ -14,6 +14,7 @@ const PlayerList = ({ listplayers, tournaments, tournamentId }) => {
     }
   }
   const showListPlayer = listplayers?.map((player, index) => {
+    
     const onDelete = (index) => {
       listplayers.splice(index, 1);
       writeDataTable(listplayers, 'players');

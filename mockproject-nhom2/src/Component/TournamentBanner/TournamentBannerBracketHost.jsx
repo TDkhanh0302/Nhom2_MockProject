@@ -77,7 +77,9 @@ const TournamentBannerBracketHost = (props) => {
           </div>
         </div>
       </div>
-      <div className="abc"></div>
+      <div className="abc">
+        
+      </div>
     </div>
   );
 };

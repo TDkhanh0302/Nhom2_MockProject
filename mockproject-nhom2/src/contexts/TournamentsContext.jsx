@@ -56,7 +56,7 @@ const TournamentsContextProvider = ({ children }) => {
   const getTournamentById = (tournament_id) => {
     return tournaments?.find((item) => item.id == tournament_id);
   };
-
+  
   const TournamentsContextData = {
     getUser,
     getUserLogged,
