@@ -8,10 +8,13 @@
     background-color: #ff7324;
   }
   .sign-up:hover {
-    background-color: #f05700;
+    background-color: #d3c2b8;
   }
 }
 
 .hidden {
   display: none;
+}
+.navbar-brand {
+  font-size: 15px;
 }
