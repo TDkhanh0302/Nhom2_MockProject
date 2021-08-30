@@ -20,7 +20,7 @@ function Footer() {
             </a>
             {/* React */}
             <a className="btn btn-outline-light btn-floating m-1" href="https://www.youtube.com/channel/UCXdbQ7bX9p0ENohyC7T1gKw" role="button">
-            <i class="fab fa-youtube"></i>
+            <i className="fab fa-youtube"></i>
             </a>
             {/* Github */}
             <a className="btn btn-outline-light btn-floating m-1" href="https://github.com/TDkhanh0302/Nhom2_MockProject" role="button">
