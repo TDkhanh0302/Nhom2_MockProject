@@ -12,12 +12,11 @@ function NewTournament() {
   const desRef=useRef(null);
   const gameNameRef=useRef(null);
   const typeRef=useRef(null);
-  const has3rdMatchRef = useRef(null);
+
   const history = useHistory();
   const createTournament = (event) =>{
     event.preventDefault();
     const id=Date.now()
-    const has3rdMatch = has3rdMatchRef.current.value
     const name=tournamentNameRef.current.value
     const description = desRef.current.value
     const player_count=0;
@@ -26,7 +25,7 @@ function NewTournament() {
     const game_name=gameNameRef.current.value
     const type= typeRef.current.value
     const newTournament = [...tournaments];
-    newTournament.push({id, name, description, player_count, state, user_id, game_name, type, has3rdMatch});
+    newTournament.push({id, name, description, player_count, state, user_id, game_name, type});
     writeDataTable(newTournament,'tournaments')
     history.push(`/tournament/bracket/${id}`);
   }
@@ -42,7 +41,7 @@ function NewTournament() {
           <h2>New Tournament</h2>
         </div>
         <div className="content row justify-content-center">
-          <form className="col-8" action="">
+          <form className="col-8" action=""  onSubmit={createTournament}>
             <div className="form_info">
               <div className="form_row row">
                 <label className=" form_label" htmlFor="tournament_name">
@@ -100,14 +99,8 @@ function NewTournament() {
                   <option value="single">Single Elimination</option>
                 </select>
               </div>
-              <div className="form-check form_row">
-                <input className="form-check-input" type="checkbox" value="1" id="flexCheckDefault" ref={has3rdMatchRef} />
-                <label className=" form_label" for="">
-                  Include match for 3rd place
-                </label>
-              </div>
             </div>
-            <button type="submit" className="btn view-btn m-3" onClick={createTournament}>
+            <button type="submit" className="btn view-btn m-3">
               Save and continue
             </button>
           </form>

@@ -46,12 +46,6 @@ const TournamentBannerPlayerHost = (props) => {
                 Paticipants: {currentTour?.player_count}
               </h6>
             </div>
-            <div className="col-lg-2 col-sm-4">
-              <h6>
-                <i className="far fa-clock me-1"></i>
-                Type: {currentTour?.type}
-              </h6>
-            </div>
           </div>
           <div className="row">
             <ul className="nav nav-tabs">

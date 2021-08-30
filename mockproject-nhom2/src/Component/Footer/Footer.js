@@ -63,7 +63,7 @@ function Footer() {
           {/* Section: Text */}
         </div>
           <div className="text-center p-3" >
-            @ Product by Group 2
+            @ Product by Group 2 - Fresher RikkeiSoft
           </div>
       </footer>
       </footer>
