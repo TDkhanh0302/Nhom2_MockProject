@@ -8,7 +8,7 @@ const TournamentBannerBracketHost = (props) => {
   const settingRef = useRef(null);
 
   const checkHost = () =>{
-    if (!userLogged|| currentTour.user_id !== userLogged.id)
+    if (!userLogged|| currentTour?.user_id !== userLogged.id)
     {
       settingRef.current.classList.add('hidden');
     }

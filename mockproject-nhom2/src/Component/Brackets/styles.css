@@ -1,0 +1,8 @@
+.jQbracket .bracket{
+    float: none!important;
+    margin-left: 50px;
+}
+
+.demo{
+    overflow-x:scroll;
+}
