@@ -42,7 +42,7 @@ function NewTournament() {
           <h2>New Tournament</h2>
         </div>
         <div className="content row justify-content-center">
-          <form className="col-8" action="">
+          <form className="col-8" action=""  onSubmit={createTournament}>
             <div className="form_info">
               <div className="form_row row">
                 <label className=" form_label" htmlFor="tournament_name">
@@ -107,7 +107,7 @@ function NewTournament() {
                 </label>
               </div>
             </div>
-            <button type="submit" className="btn view-btn m-3" onClick={createTournament}>
+            <button type="submit" className="btn view-btn m-3">
               Save and continue
             </button>
           </form>

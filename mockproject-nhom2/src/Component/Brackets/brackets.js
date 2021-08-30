@@ -146,11 +146,7 @@ function Bracket(props) {
   }, []);
 
   $(function () {
-<<<<<<< HEAD
-    if(!userLogged || currentTour?.user_id !== userLogged.id){
-=======
     if (!userLogged || currentTour?.user_id !== userLogged.id) {
->>>>>>> 01ae4d686ea3446f77e397563c36df37ebd2c664
       console.log(customData);
       $('#matches .demo').bracket({
         init: customData,

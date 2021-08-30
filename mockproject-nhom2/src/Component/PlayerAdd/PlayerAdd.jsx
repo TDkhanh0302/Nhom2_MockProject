@@ -72,7 +72,7 @@ const PlayerAdd = ({ listplayers, tournaments, tournamentId }) => {
   return (
     <div>
       <div className="container pt-3">
-        <form>
+        <form onSubmit={handleAddPlayer}>
           <div className="row">
             <input
               className="col-sm-3 form-control add-player me-2"
@@ -80,11 +80,12 @@ const PlayerAdd = ({ listplayers, tournaments, tournamentId }) => {
               name="tournament_name"
               id="tournament_name"
               ref={playerRef}
+              required
             />
             <button
               className="col-sm-2 col-md-1 btn view-btn add-btn"
               type="submit"
-              onClick={handleAddPlayer}
+              
             >
               Add
             </button>
