@@ -3,12 +3,23 @@ import { useContext, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import '../../../node_modules/jquery-bracket/dist/jquery.bracket.min.js';
 import { TournamentsContext } from '../../contexts/TournamentsContext.jsx';
+<<<<<<< HEAD
 import './styles.css'
+=======
+import './styles.css';
+>>>>>>> 01ae4d686ea3446f77e397563c36df37ebd2c664
 
 function Bracket(props) {
-  const { tournamentId,currentTour } = props;
-  const { tournaments, players, getTournaments, getPlayers, writeDataTable,userLogged,getUserLogged} =
-    useContext(TournamentsContext);
+  const { tournamentId, currentTour } = props;
+  const {
+    tournaments,
+    players,
+    getTournaments,
+    getPlayers,
+    writeDataTable,
+    userLogged,
+    getUserLogged,
+  } = useContext(TournamentsContext);
   const history = useHistory();
 
   var tourIndex = -1;
@@ -64,7 +75,6 @@ function Bracket(props) {
                 });
                 tournaments[tourIndex].player_count = players_count;
                 writeDataTable(tournaments, 'tournaments');
-                
               } else {
                 inputValue = filters[i].name;
                 doneCb({ name: inputValue });
@@ -105,6 +115,14 @@ function Bracket(props) {
     } else history.push('/tournament/players/' + tournamentId);
   }
 
+  var scores = [];
+  function saveFn(data, userData) {
+    let result = data.results;
+    scores.push({ tournamentId, result });
+    // $('#saveOutput').text('POST ' + userData + ' ' + json);
+    console.log('data', scores);
+  }
+
   function render_fn(container, data, score, state) {
     switch (state) {
       case 'empty-bye':
@@ -132,17 +150,21 @@ function Bracket(props) {
   }, []);
 
   $(function () {
+<<<<<<< HEAD
     if(!userLogged || currentTour?.user_id !== userLogged.id){
+=======
+    if (!userLogged || currentTour?.user_id !== userLogged.id) {
+>>>>>>> 01ae4d686ea3446f77e397563c36df37ebd2c664
       console.log(customData);
       $('#matches .demo').bracket({
         init: customData,
-        decorator:{edit: edit_fn,render: render_fn},
+        decorator: { edit: edit_fn, render: render_fn },
         teamWidth: 150,
         scoreWidth: 20,
         matchMargin: 40,
         roundMargin: 50,
-    })}
-    else{
+      });
+    } else {
       console.log(customData);
       $('#matches .demo').bracket({
         init: customData,
@@ -152,7 +174,7 @@ function Bracket(props) {
         scoreWidth: 20,
         matchMargin: 40,
         roundMargin: 50,
-      });  
+      });
     }
   });
 
