@@ -12,16 +12,16 @@ function Header() {
   const history = useHistory();
 
   const checkUserLogged = () => {
-    if (!userLogged) {
-      usernameRef.current.classList.add('hidden');
-      logoutRef.current.classList.add('hidden');
-      loginRef.current.classList.remove('hidden');
-      registerRef.current.classList.remove('hidden');
-    } else {
+    if (userLogged?.id) {
       usernameRef.current.classList.remove('hidden');
       logoutRef.current.classList.remove('hidden');
       loginRef.current.classList.add('hidden');
       registerRef.current.classList.add('hidden');
+    } else {
+      usernameRef.current.classList.add('hidden');
+      logoutRef.current.classList.add('hidden');
+      loginRef.current.classList.remove('hidden');
+      registerRef.current.classList.remove('hidden');
     }
   };
 
@@ -33,14 +33,14 @@ function Header() {
     registerRef.current.classList.remove('hidden');
   };
   const handleYourTournament = () => {
-    if(!userLogged){
+    if (!userLogged) {
       alert('Please log in before enter your tournament!');
-      history.push('/login')
+      history.push('/login');
     } else {
       history.push('/your-tournaments');
     }
-  }
-  
+  };
+
   useEffect(() => {
     getUserLogged();
     checkUserLogged();
@@ -50,7 +50,10 @@ function Header() {
     <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
-          <img src="https://live.staticflickr.com/65535/51403292507_1522328405_n.jpg" height="32px"/>
+          <img
+            src="https://live.staticflickr.com/65535/51403292507_1522328405_n.jpg"
+            height="32px"
+          />
         </Link>
         <button
           className="navbar-toggler"
