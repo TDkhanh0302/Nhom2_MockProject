@@ -1,43 +1,54 @@
 import $ from 'jquery';
+import jQuery from 'jquery';
 import { useContext, useEffect } from 'react';
 import '../../../node_modules/jquery-bracket/dist/jquery.bracket.min.js';
 import { TournamentsContext } from '../../contexts/TournamentsContext.jsx';
-//require('../../../node_modules/jquery-bracket/dist/jquery.bracket.min.js');
+// require('../../../node_modules/jquery-bracket/dist/jquery.bracket.min.js');
 
 function Bracket(props) {
   const { tournamentId } = props;
   const { players, getPlayers } = useContext(TournamentsContext);
-  console.log(players);
+
   let filter = [];
-  console.log(tournamentId);
-  for(let i = 0; i < players?.length; i++)
-  {
-    if(players[i]?.tournament_id==tournamentId)
-    {
+  for (let i = 0; i < players?.length; i++) {
+    if (players[i]?.tournament_id == tournamentId) {
       filter.push(players[i]);
     }
   }
-  console.log(filter);
-  var team = [];
-  for (let i = 0; i < players?.length; i++) {
-      if (team.length == 0) {
-        team.push([{ 'name': players[i].name }, null]);
-      }
-      let count = team.length - 1;
-      if (team[count][1] == null) {
-        team[count][1] = { 'name': players[i].name };
-      } else {
-        team[count + 1] = [{ 'name': players[i].name }, null];
-      }
+
+  const loopNumber = Math.ceil(filter.length / 2);
+  if (filter.length % 2 == 1) {
+    filter.push('null');
   }
-  console.log(team);
+  const newArr = [];
+  for (let i = 1; i <= loopNumber; i++) {
+    newArr.push(filter.splice(0, 2));
+  }
+  console.log(newArr);
+
+  // var team = [];
+  // for (let i = 0; i < players?.length; i++) {
+  //   if (team.length == 0) {
+  //     team.push([{ name: players[i].name }, null]);
+  //   }
+  //   let count = team.length - 1;
+  //   if (team[count][1] == null) {
+  //     team[count][1] = { name: players[i].name };
+  //   } else {
+  //     team[count + 1] = [{ name: players[i].name }, null];
+  //   }
+  // }
+  // console.log(team);
+
   var customData = {
-    teams: team,
+    teams: newArr,
     results: [],
   };
+
   useEffect(() => {
     getPlayers();
   }, []);
+
   function edit_fn(container, data, doneCb) {
     var input = $('<input type="text">');
     input.val(data ? +data.name : '');
@@ -51,6 +62,14 @@ function Bracket(props) {
         doneCb({ name: inputValue });
       }
     });
+  }
+
+  var scores = [];
+  function saveFn(data, userData) {
+    let result = data.results;
+    scores.push({ tournamentId, result });
+    // $('#saveOutput').text('POST ' + userData + ' ' + json);
+    console.log('data', scores);
   }
 
   function render_fn(container, data, score, state) {
@@ -77,8 +96,9 @@ function Bracket(props) {
   $(function () {
     $('#matches .demo').bracket({
       init: customData,
-      save: function () {} /* without save() labels are disabled */,
+      save: saveFn,
       decorator: { edit: edit_fn, render: render_fn },
+      userData: 'http://myapi',
       teamWidth: 150,
       scoreWidth: 20,
       matchMargin: 40,
