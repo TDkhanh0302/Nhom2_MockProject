@@ -9,7 +9,7 @@ const TournamentThumb = (props) => {
     history.push(`/tournament/bracket/${id}`);
   };
   return (
-    <div className="col-lg-3 sm-8 card_box">
+    <div className="col-lg-3 sm-8 ms-4 card_box">
       <div className="card-title mb-4">
         <img
           src="https://i2.wp.com/s3.amazonaws.com/challonge_app/misc/challonge_fireball_gray.png?ssl=1"
