@@ -1,10 +1,9 @@
 import $ from 'jquery';
-import jQuery from 'jquery';
 import { useContext, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import '../../../node_modules/jquery-bracket/dist/jquery.bracket.min.js';
 import { TournamentsContext } from '../../contexts/TournamentsContext.jsx';
-// require('../../../node_modules/jquery-bracket/dist/jquery.bracket.min.js');
+import './styles.css';
 
 function Bracket(props) {
   const { tournamentId, currentTour } = props;
@@ -147,7 +146,7 @@ function Bracket(props) {
   }, []);
 
   $(function () {
-    if (!userLogged || currentTour.user_id !== userLogged.id) {
+    if (!userLogged || currentTour?.user_id !== userLogged.id) {
       console.log(customData);
       $('#matches .demo').bracket({
         init: customData,
