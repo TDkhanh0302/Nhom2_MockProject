@@ -10,17 +10,17 @@ function Group() {
                     <div className="ceo-item col-md-12 col-lg-4">
                         <img src="./homepage img/ceo-2.jpg" alt="" width="250px"/>
                         <h4 className="mt-3">Nguyễn Minh Hải</h4>
-                        <h6>VNU - UET</h6>
+                        <h6>Member</h6>
                     </div>
                     <div className="ceo-item col-md-12 col-lg-4">
                         <img src="./homepage img/ceo-1.jpeg" alt="" width="250px"/>
                         <h4 className="mt-3">Trình Đức Khanh</h4>
-                        <h6>VNU - UET</h6>
+                        <h6>Leader</h6>
                     </div>
                     <div className="ceo-item col-md-12 col-lg-4">
                         <img src="./homepage img/ceo-3.jpg" alt="" width="250px"/>
                         <h4 className="mt-3">Đỗ Văn Thành</h4>
-                        <h6>VNU - UET</h6>
+                        <h6>Member</h6>
                     </div>
                 </div>
             </div>
