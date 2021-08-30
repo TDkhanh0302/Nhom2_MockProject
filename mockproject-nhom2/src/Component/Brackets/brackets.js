@@ -8,31 +8,34 @@ function Bracket(props) {
   const { tournamentId } = props;
   const { players, getPlayers } = useContext(TournamentsContext);
   console.log(players);
-  let filter = [];
-  console.log(tournamentId);
-  for(let i = 0; i < players?.length; i++)
-  {
-    if(players[i]?.tournament_id==tournamentId)
-    {
-      filter.push(players[i]);
-    }
-  }
-  console.log(filter);
-  var team = [];
-  for (let i = 0; i < players?.length; i++) {
-      if (team.length == 0) {
-        team.push([{ 'name': players[i].name }, null]);
-      }
-      let count = team.length - 1;
-      if (team[count][1] == null) {
-        team[count][1] = { 'name': players[i].name };
-      } else {
-        team[count + 1] = [{ 'name': players[i].name }, null];
-      }
-  }
-  console.log(team);
+  // let filter = [];
+  // console.log(tournamentId);
+  // for(let i = 0; i < players?.length; i++)
+  // {
+  //   if(players[i]?.tournament_id==tournamentId)
+  //   {
+  //     filter.push(players[i]);
+  //   }
+  // }
+  // console.log(filter);
+  
+  // var team = [];
+
+  // for (let i = 0; i < players?.length; i++) {
+  //     if (team.length == 0) {
+  //       team.push([{ 'name': players[i].name }, null]);
+  //     }
+  //     let count = team.length - 1;
+  //     if (team[count][1] == null) {
+  //       team[count][1] = { 'name': players[i].name };
+  //     } else {
+  //       team[count + 1] = [{ 'name': players[i].name }, null];
+  //     }
+  // }
+  // console.log(team);
+
   var customData = {
-    teams: team,
+    teams: [],
     results: [],
   };
   useEffect(() => {
